@@ -1,0 +1,423 @@
+General requirements of Note Book Site
+URL of Main page http:// %Domain%/
+e.g.
+http://127.0.0.1:8000/
+
+Site for creating, updating, and deleting notes. Also, users with admin permissions can go to Admin Panel. Users can see their own created notes on the Main (Notes) page. 
+Notes other users, created users, groups, their permissions, and recent actions admin user can see on Admin Panel.
+Registration of users is able only by Admin Panel.  Users can`t register via the Login/Registration page.
+This site includes next parts: Header, Page content, and Bottom bar.
+For logged-in users, the Notes page is opened. For non-logged-in user Login page is opened.
+
+
+Elements of Site. 
+The header of the site should include the MAIN ACADEMY logo and “НОТАТНИК ДЛЯ ТЕСТУВАННЯ” text. And blue background under it. This text and logo are not clickable.
+
+
+
+The bottom should include “Created by Main Academy”. The background should be blue. This text is not clickable. This text can be under Page content (not at the bottom) in case a little data in page content. 
+Header and items should be present for all pages except the Admin panel page.
+ For logged-in users, the blue background should include the next items: 
+[%Username%] is not clickable.
+“Notes” is clickable and opens its page.
+“Create” item is clickable and opens its page.
+“Update” item is clickable and opens its page.
+“Delete” item is clickable and opens its page.
+About is clickable and opens its page.
+Logout is clickable and opens its page.
+| Admin Panel (only for users with permission to access this panel) is clickable and opens its page.
+There are login required pages. 
+
+
+After moving the mouse pointer to clickable items, the backgrounds of these items should be white. Opened tab/page should be selected(highlighted).
+
+
+Login page and login process
+URL http://%Domain%/login/
+For non-logged users Opening the main page redirected to Login page.
+The login page include
+“Please login to see this page.” text. (only in case http://%Domain%/login/?next=/  opened this URL)
+Username field
+Password
+login button
+User should be able to site via the correct username and password.
+Username and password are case-sensitive.
+In case incorrect login or password login should not be performed and the error “Your username and password didn't match. Please try again.” Should be present.
+After login from the main page http://%Domain%/accounts/profile/ or  http://%Domain%/ should be opened. (Notes page).
+In case opening the login-required page login page should be opened. After logging in this page should be opened.
+
+Notes page
+URL http://%Domain%
+
+User can see all own notes on this page. Conts of notes are unlimited. Notes are able only for reading.
+The title of the note should be centered.
+Text of the note should be under the title. The long text  (12/06/24 UPD more than 70 symbols of letters or 62 numbers) should be moved to the next line.
+The date of creating the note should be present under the text of the note, after the line.  
+Date format: timezone of the user. e.g.  Feb. 23, 2023, 6:56 p.m.
+Sort of notes should be by creating time.
+
+
+
+
+
+
+
+
+Create page
+ http://%Domain%/create-page/
+
+Page for creating a new note.
+Structure of this page content:
+Note’s title. It is a required field. The title of the note has to be greater than 4 symbols but only 1 line.  Title is “string”. It can contain any words, symbols, or links. Max 30 symbols
+
+Note`s text. It is a required field. The text of the note has to be greater than 4 symbols. The long text (12/06/24 UPD more than 70 symbols of letters or 62 numbers)  should be moved to the next line. Text is “string”. It can contain any words, symbols, or links. After 10 lines vertical scroll should be able.
+
+“Create new note” button. This button should save a note. After successfully creating and saving the note Main page (Notes page) should be opened.
+
+
+Update page  
+http://%Domain%/update-page/
+
+Page for updating created notes. All users created notes should be present and able to update.
+Structure of this page content:
+Note’s title. It is a read-only field. 
+
+Note`s text. It is a required field. The text of the note has to be greater than 4 symbols. The long text  (12/06/24 UPD more than 70 symbols of letters or 62 numbers) should be moved to the next line. Text is “string”. It can contain any words, symbols, or links. After 10 lines vertical scroll should be able.
+
+“Created at: %date%” data. The date of creating the note should be present under the text of the note and over “Update note” button.  
+Date format: timezone of the user. e.g.  Feb. 23, 2023, 6:56 p.m.
+Sort of notes should be by creating time.
+
+“Update note” button. This button should save a note. After successfully updating and saving the note Main page (Notes page) should be opened.
+
+
+
+Delete page 
+http://%Domain%/delete-page/
+Page for deleting created notes. All users created notes should be present and able to delete.
+Structure of this page content:
+Note’s title. It is a read-only field. 
+
+Note`s text. It is a read-only field. After the 10 lines vertical scroll should be able.
+
+“Created at: %date%” data. The date of creating the note should be present under the text of the note and over “Delete Note” button.  
+Date format: timezone of the user. e.g.  Feb. 23, 2023, 6:56 p.m.
+Sort of notes should be by creating time.
+
+“Delete note” button. This button should delete the note. After successfully deleting the note Main page (Notes page) should be opened without deleted note.
+
+
+About page
+http://%Domain%/about/
+After clicking on About> About page is opened.
+Content of this page: “Hey there! It is the %number_of_verion% version of the site.”
+
+Logout page
+http://%Domain%/logout/
+After clicking on Logout > Logout page is opened and the user should be logged out. The content of the page should include “Go to Log In page” clickable text. The main page should be opened by clicking on this text.
+
+
+
+Admin Panel
+Admin Panel page general requirements
+http://%Domain%/admin/
+Users with admin permissions can go to Admin Panel via the Admin Panel button.
+Notes other users, created users, groups, their permissions, and recent actions admin user can see on Admin Panel. Registration of users is able only by Admin Panel.  Users can`t register via the Login/Registration page.
+
+This page is without items from previous pages. Admin main page is opened after clicking on the Admin Panel item.
+
+Structure of this page:
+Header: 
+“Django administrator” [UPD 05/03/2023 “Django administration”]text is clickable. After clicking > http://%Domain%/admin/ is opened.
+WELCOME, %USERNAME%.  is not clickable
+VIEW SITE is clickable. After clicking > Main page http://%Domain%/ is opened.
+/ CHANGE PASSWORD is clickable.
+After clicking> http://%Domain%/admin/password_change/ page is opened. 
+/ LOG OUT is clickable.
+After clicking> http://%Domain%/admin/logout/ page is opened.
+This Header is present for all admin pages.
+Content of page (due to opened page).
+
+
+Admin Main Page
+http://%Domain%/admin/
+
+Elements: 
+Header 
+
+“Site administrator” [UPD 05/03/2023 “Site administration”]  text is not clickable. 
+
+“AUTHENTICATION AND AUTHORIZATION”  text is clickable. After clicking on it http://%Domain%/admin/auth/ page is opened. This page contains 
+Sub-Header: path to this page. E.g.: “Home › %current page%”
+“Authentication and Authorization administration” text (not clickable)
+“AUTHENTICATION AND AUTHORIZATION” text (clickable)
+“Groups”(clickable),   “+ Add”(clickable),      “%penicon% Change”(clickable)
+“Users”(clickable),      “+ Add”(clickable),      “%penicon%Change(clickable)” 
+Behaviour and links for this items see below. They are the same as on the Admin Main Page.
+
+
+
+
+
+“Groups” is clickable. After clicking on it > http://%Domain%/admin/auth/group/ is opened. 
+
+“+ Add” is clickable. After clicking on it > http://%Domain%/admin/auth/group/add/ is opened.
+
+“+ Change” is clickable. After clicking on it > http://%Domain%/admin/auth/group/ is opened. 
+
+
+“Users” is clickable. After clicking on it > http://%Domain%/admin/auth/user/ is opened
+
+“+ Add” is clickable. After clicking on it > http://%Domain%/admin/auth/user/add/ is opened.
+
+“+ Change” is clickable. After clicking on it > http://%Domain%/admin/auth/user/ is opened. 
+
+
+NOTE text is clickable. After clicking on it http://%Domain%/admin/note/ is opened.
+This page contains 
+Sub-Header: path to this page. E.g.: “Home › %current page%”
+“Note administration” text (not clickable)
+NOTE (clickable)
+“Notes”(clickable), “+ Add”(clickable),   “+ Change”(clickable)
+
+
+
+
+“Notes” is clickable. After clicking on it http://%Domain%/admin/note/note/
+
+  “+ Add” is clickable. After clicking on it > http://%Domain%/admin/note/note/add/ is opened.
+
+“+ Change” is clickable. After clicking on it > http://%Domain%/admin/note/note/ is opened. 
+
+
+“Recent actions” text is not clickable. 
+
+
+“My actions” text is not clickable. This menu contains user`s saved last actions from Admin panel.  (e.g. creating user, changing user, adding note from admin panel, changing note, removing note).  Each action should have name (of user/note/group) and type(user/note/group) under  name.  Also each action (except removing note/user/group) is clickable and should open this created/changed item (user/note/group).
+
+All previous elements of PATH should be clickable and open its page. E.g.
+Home(clickable) › Authentication and Authorization(clickable) › Groups(clickable) › Add group(not clickable)
+
+
+Notes page and behaviour
+http://%Domain%/admin/note/note/
+Notes page http://%Domain%/admin/note/note/ page is opened as default.
+
+Admin can see: 
+“Select note to change” title
+Owner, Created date, and Text of notes 
+Counter of created notes 
+Counter of selected notes
+Admin can open any note from Notes list. Opening a note redirect to changing this note.
+Admin can add note by “ADD NOTE+” button in top right corner 
+Admin can select and delete selected notes. [UPD by YR 26/02/2023. Deleting: Actions>”delete selected notes” in drop-down list >Go.]
+Admin can select all notes.
+Admin can sort notes by OWNER/ CREATED AT/PRETTY TEXT. Also can remove from sorting.
+Admin can filter notes by 
+OWNER (All; user1, user2…..etc) and
+CREATED AT (Any date; Today; Past 7 days; This month; This year)
+
+Left Admin menu is available.  Admin can filter the Left Admin menu by typed text. Admin can create Group/User/Notes from the Left Admin menu. Admin can open AUTHENTICATION AND AUTHORIZATION / NOTE menu. Admin can open Groups/Users/Notes menu.
+UPD 14/03/2023 Admin can collapse and expand Left Admin menu by  “<<” button.
+
+
+Manipulation on notes:
+Add Note   page http://%Domain%/admin/note/note/add/ . 
+
+Left Admin menu is available.  
+“Add note” title.
+Admin can create a note via the next steps:
+Choose the owner of notes (required param). Also can create new or change selected user by this menu.
+Insert Title (required param)
+Insert text (required param)
+Saving note. Admin should be able to:
+Save and add another note by its button
+Save and continue editing by its button
+Only Save note and go to Notes page
+
+
+
+Delete Note 
+Admin can delete notes:
+Only by one from changing note page by Delete button 
+On notes page by selecting note or notes > choosing (UPD in the drop-down list)“Delete selected notes” >click on Go button.
+UPD 14/06/2024 In case deleting note Confirmation pop-up is present:
+
+
+Change note page http://%Domain%/admin/note/note/18/change/
+
+Left Admin menu is available.  
+“Change note” title. 
+Note object (%number_of_note_include_deleted)
+Changing note:
+Choose owner of notes (required param). Also can create new or change selected user by this menu.
+Insert/Change Title (required param)
+Insert/Change text (required param)
+Saving note. Admin should be able to:
+Save and add another note by its button
+Save and continue editing by its button
+Only Save note and go to Notes page
+Delete note
+
+History button. Clicking on it opens the Change history of this note.
+
+
+
+
+Groups page and behaviour 
+http://%Domain%/admin/auth/group/
+Page for Creating, changing, or deletion user`s groups. Group are used for adding common permissions for users from one group (without adding permissions per user separately)
+Groups page http://%Domain%/admin/auth/group/ page is opened as default.
+
+
+Admin can see: 
+“Select group to change” title
+Name of Gropus 
+Counter of created groups
+Counter of selected groups
+Admin can open any Group from Groups list. Opening a Group redirect to changing this group.
+Admin can select and delete selected groups.
+Admin can select all groups.
+Admin can find group by Search field.
+Admin can add group by “ADD GROUP+” button in top right corner 
+
+Left Admin menu is available.  Admin can filter the Left Admin menu by typed text. Admin can create Group/User/Notes from the Left Admin menu. Admin can open AUTICATION AND AUTHORIZATION / NOTE menu. Admin can open Groups/Users/Notes menu.
+
+
+Manipulation on notes:
+Add Group page http://%Domain%/admin/auth/group/add/
+
+
+Left Admin menu is available.  
+“Add group” title.
+Admin can create a group via the next steps:
+Insert name of the group (required param). 
+Add some Permissions to this group (not required param)
+Remove some Permissions to this group (not required param)
+Choose All permissions to group (not required param)
+Remove All permissions to group (not required param)
+Filer permissions by inserting text in the filter search field for the list of Available Permissions
+
+Saving group. Admin should be able to:
+Save and add another group by its button
+Save and continue editing by its button
+Only Save the group and go to the Groups page
+
+Change group page http://%Domain%/admin/auth/group/1/change/
+
+Left Admin menu is available.  
+“Change group” title. 
+Group name
+Admin can change a group via the next steps:
+Insert/Change the name of the group (required param). 
+Add some Permissions to this group (not required param)
+Remove some Permissions to this group (not required param)
+Choose All permissions to group (not required param)
+Remove All permissions to group (not required param)
+Filer permissions by inserting text in the filter search field for the list of Available Permissions
+
+Saving group. Admin should be able to:
+Save and add another group by its button
+Save and continue editing by its button
+Only Save the group and go to the Groups page
+Delete Group
+History button. Clicking on it opens the Change history of this group.
+
+
+Delete Group
+Admin can delete groups:
+Only by one from changing group page by Delete button 
+On the groups page by selecting group or groups> choose (UPD in the drop-down list) “Delete selected groups”>click on the Go button
+
+Users page and behaviour
+
+No need to test each available user permission separately. It is a feature of another team. 
+Testing of these general user permissions for created/changed users is enough.
+
+http://%Domain%/admin/auth/user/
+Notes  page http://%Domain%/admin/auth/user/ page is opened as default.
+
+Admin can see: 
+“Select user to change” title
+Username, Email address, First name, Last name, Staff Status
+Counter of created users
+Counter of selected users
+Admin can open any user from the User list. Opening a user redirect to changing this user.
+Admin can add users by “ADD USER+” button in the top right corner 
+Admin can select and delete selected users.
+Admin can select all users.
+Admin can find users by Search field.
+Admin can sort notes by Username, Email address, First name, Last name, and Staff Status. Also can remove from sorting.
+Admin can filter notes by 
+Staff status(All, Yes, No) 
+Superuser status (All, Yes, No)
+Active (All, Yes, No)
+Groups (All, group1…group N, “-”)UPD 10/03/2023
+
+Left Admin menu is available.  Admin can filter the Left Admin menu by typed text. Admin can create Group/User/Notes from the Left Admin menu. Admin can open AUTICATION AND AUTHORIZATION / NOTE menu. Admin can open Groups/Users/Notes menu.
+
+Manipulation on users:
+Add User  page http://%Domain%/admin/user/add/ . 
+
+Left Admin menu is available.  
+“Add user” title.
+“First, enter a username and password. Then, you’ll be able to edit more user options.” text
+Admin can create a user via the next steps:
+Insert username due to rules(required param). Rules: Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+Insert Password due to rules(required param) Rules:
+Your password can’t be too similar to your other personal information.
+Your password must contain at least 8 characters.
+Your password can’t be a commonly used password.
+Your password can’t be entirely numeric.
+Insert Password confirmation(required param). Enter the same password as before, for verification.
+Saving user. Admin should be able to:
+Save ( Created user saved with default additional data and permissions.) and add another user by its button. 
+Save and continue editing by its button. Redirect to the Change User page. 
+Only Save user and go to Users page
+
+
+
+Delete User
+Admin can delete a user:
+Only by one from changing user page by Delete button 
+on users page by selecting user or users> choosing (UPD in the drop-down list) “Delete selected users”>click on Go button
+
+Change user page http://%Domain%/admin/auth/user/1/change/
+
+Left Admin menu is available.  
+“Change user” title. 
+“Username_opened_user” username
+Changing user:
+Insert/Change username due to rules
+See password data (e.g. algorithm: pbkdf2_sha256 iterations: 320000 salt: YiaqEq**************** hash: 2YkBdF**************************************)
+Link to change password in the text “Raw passwords are not stored, so there is no way to see this user’s password, but you can change the password using this form.” Link: http://%Domain%/admin/auth/user/1/password/
+Personal info: First name: (not required param)
+Personal info: Last name: (not required param)
+Personal info: Email address: (not required param)
+Permissions. Status of the user: 
+Active. It is a checkbox. The user does not have permission to Admin panel.
+Staff status. It is a checkbox. The user has permission to log in to  Admin panel but doesn`t have permission to view or edit anything.
+Superuser status. It is a checkbox. The user has permission to log in to the Admin panel and permission to view or edit anything.
+Permissions. Groups. The groups this user belongs to. A user will get all permissions granted to each of their groups. Actions:
+Add some Groups to this user (not required param)
+Remove some Groups to this user (not required param)
+Choose All groups to user (not required param)
+Remove All groups to user (not required param)
+Filer Groups by inserting text in the filter search field for a list of Available groups
+User Permissions 
+Add some Permissions to this user (not required param)
+Remove some Permissions to this user (not required param)
+Choose All permissions to user (not required param)
+Remove All permissions to user (not required param)
+Filer permissions by inserting text in the filter search field for the list of Available Permissions
+UPD 17/06/2024 Important dates.  Last login: Date and Time.  Admin can change this data. Note: You are 2 hours ahead of server time. or Note: You are 3 hours ahead of server time. (It depends on time zone) 
+UPD 17/06/2024 Important dates.  Data joined: Date and Time.  Admin can change this data. Note: You are 2 hours ahead of server time. or Note: You are 3 hours ahead of server time. (It depends on time zone) 
+
+
+Saving user. Admin should be able to:
+Save and add another user by its button
+Save and continue editing by its button
+Only Save the user and go to the Users page
+Delete user
+
+History button. Clicking on it opens the Change history of this user
