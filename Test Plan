@@ -1,0 +1,531 @@
+
+  Test plan
+1.3_QANTB:v1-v5
+
+
+
+
+
+
+
+
+Test plan identifier 
+Introduction
+Links 
+Test items; (all features of Notebook)
+Features to be tested
+Features not to be tested
+Approach
+Entry and Exit criteria
+Suspension criteria and resumption requirements
+Test deliverables (essences)
+Testing tasks
+Environmental needs
+Responsibilities
+Schedule
+Risks and contingencies
+Approvals
+
+
+
+
+
+
+
+
+Introduction
+
+Note Book Site  http://127.0.0.1:8000/
+This site is designed for the convenience of keeping your notes.
+Thanks to it, the user can create, update, delete and read his notes on the Note page.
+Logout allows the user to leave the site, after which the "Go to the login page" page will open. Only registered user can login. Users cannot register through the login/registration page.
+For administrators, additional functions are opened, such as the admin panel.
+Notes of other users, created users, groups, their permissions and recent activities that the admin can see in the admin panel.
+You can read information about this site on its About page
+The site is functionally convenient. It has a header where you can click Note, Create, Update, Delete, 
+About Us, Admin Panel (for admin users) and open a separate page that has a bottom panel with the text "Created by the Main Academy".
+The Notebook application, developed by Main Academy, is a versatile and user-friendly tool designed to help users organize their notes, 
+tasks, and ideas efficiently. This application aims to improve productivity by providing a simple and intuitive interface for managing daily information. 
+It offers many features such as note-taking, classification, groups creation and synchronization across multiple devices, allowing users to access notes anytime, anywhere.
+The purpose of this test plan is to describe testing strategies and approaches to verify the functionality, performance, and reliability of the Notebook application.
+This document describes in detail the purpose, scope, testing methods, and resources needed to conduct comprehensive testing. 
+The goal is to make sure that your application meets the highest quality standards and provides the best user experience.
+The main objectives of this test plan are::
+1. Functional Testing: Make sure that all the functions of the Notebook app are working properly.
+2. Performance Testing: Evaluate the performance and stability of the application in various conditions.
+3. Compatibility test: Make sure that the application works correctly on different devices and on different operating systems.
+4. Usability Testing: Evaluate the usability and overall experience with your application.
+5. Security Testing: Identify and eliminate potential vulnerabilities in your application.
+
+
+
+Test items                                                                 
+         
+Part of site
+Features
+Component
+Elements of site
+-
+Notebook/Admin panel
+Authorisation
+-
+Notebook
+Create page
+Creating note
+Notebook/Admin panel
+Update page
+Updating note
+Notebook/Admin panel
+Delete page
+Deleting note
+Notebook/Admin panel
+Notes page
+Notes that has been created
+Notebook/Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Add group
+Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Change group
+Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Delete group
+Admin panel
+
+
+
+
+
+
+
+
+
+Features to be tested
+
+Part of site
+Features
+Component
+Elements of site
+-
+Notebook/Admin panel
+Authorisation
+-
+Notebook
+Create page
+Creating note
+Notebook/Admin panel
+Update page
+Updating note
+Notebook/Admin panel
+Delete page
+Deleting note
+Notebook/Admin panel
+Notes page
+Notes that has been created
+Notebook/Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Add group
+Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Change group
+Admin panel
+AUTHENTICATION AND AUTHORIZATION
+Delete group
+Admin panel
+
+
+
+
+
+
+
+Features not to be tested
+This is a listing of what is NOT to be tested and features that will be tested in future versions:
+
+Deletion of the account.
+Navigation without using a mouse.
+Colors of the interface.
+Grammar/spelling.
+Highlighting text.
+Changing of the cursor type after hovering on clickable elements.
+Scaling.
+Reactions of the clickable elements after hovering the cursor..
+Colors of the interface.
+Logo.
+
+
+
+
+
+
+
+These features are not included in this version of the software due to their low risk and production impact. And also due to the stable successful use of these features previously.
+Approach
+ 
+The objective of  testing is to make sure that the website works according to  the requirements, and no significant errors appear.
+Our testing approach is designed to ensure compliance with the functional requirements of the site for creating, 
+updating, and deleting notes, as well as managing users and their permissions. We will also conduct regression testing to 
+ensure that new versions do not impact previously implemented features. 
+During this testing we use Exploratory testing that means we will create high-level test cases for testing each version and 
+low-level regression test cases based on fixed bugs for re-checking broken below places.
+The website must pass all the planned tests. Only in this case its quality can be assured.
+ 
+ 
+
+
+
+
+
+The main testing types that will be executed in the project are:
+ 
+1.	Authentication and Authorization Testing: Verify user login with correct credentials and ensure 
+access to the admin panel is restricted to users with appropriate permissions.
+ 
+2.	Testing Note Creation, Update, and Deletion: Ensure notes can be created, updated, and deleted correctly and are sorted by creation date.
+ 
+3.	Administrative Panel Testing: Verify functionalities for adding, updating, and deleting users , also ensure administrators can manage notes.
+
+4.	Regression Testing: Recheck fixed bugs and ensure new changes do not affect existing functionalities through high-level and low-level test cases.
+
+
+
+
+
+
+
+
+Entry/Exit criteria
+Entry сriteria
+
+Readiness of  Devices:
+Ensure all necessary devices are ready for use in testing functionality. Ensure each device is equipped with the necessary software and tools for testing. 
+Ensure all devices are functioning properly and have necessary network access for test execution.
+
+Availability of Tools:
+Confirm all essential tools for testing devices are available for use. Ensure all team members have access to these tools and can effectively utilize them for testing.
+
+ Approval and Definition of Requirements:
+Verify that all requirements for the feature's functionality are approved by relevant stakeholders and clearly defined before the testing process begins. 
+Ensure all team members have access to these requirements and understand them for effective testing.
+
+Sufficient Test Data:
+Ensure there is an adequate amount of test data of various types to cover different testing scenarios. Ensure this data encompasses various input variations, 
+working conditions, and other critical aspects that need to be tested.
+
+Approval of Testing Plan:
+Obtain approval of the testing plan from responsible individuals before the testing process commences.
+
+Completeness of Functionality:
+Ensure all features of the feature are implemented and functioning correctly.
+
+Readiness of Testing Environment:
+Check the readiness of the testing environment.
+
+Clarity of Requirements:
+Ensure all requirements for the feature's functionality are clear, understandable, and documented.
+
+Team Completeness:
+Ensure there is a sufficient number of qualified team members to execute all planned tasks.
+Exit criteria:
+Test Coverage Completion:
+Ensure that all test cases have been executed and verified.
+Requirement Satisfaction:
+Validate that all functional and security requirements concerning user registration and authentication have been adequately tested and confirmed.
+Defect Closure:
+Verify that defects with high priority and severity have been resolved and closed or have an agreed-upon resolution.
+Stability and Performance:
+Confirm that the processes operate stably and efficiently, meeting performance requirements under various load conditions.
+Security Compliance:
+Ensure that all potential security threats identified during testing of user registration and authentication 
+processes have been addressed or documented with agreed-upon security measures.
+Documentation Completeness:
+All necessary documentation, including test plans, test cases, and reports, have been completed and updated as required.
+SApproval:
+Obtain approval from relevant stakeholders, such as project management and product owners, indicating readiness to proceed to the next stage of development.
+
+
+
+
+
+
+
+Suspension criteria and resumption requirements;
+Suspension criteria: 
+The program has 80% critical bugs. 
+Festive days.
+Power outage for more than 8 hours per working day. 
+More than 50% of testers get sick.
+Stopping funding. 
+Natural cataclysms and technogenic disasters. 
+More than 50% of the testers went on vacation. 
+More than 50% of the testers have resigned. 
+The testing equipment has failed. 
+Termination of the project by the customer 
+Resumption requirements: 
+Solving the problems described in the suspension criteria.
+
+
+
+
+
+
+Test deliverables (essences)
+In this test plan, we will use
+Exploratory testing
+High-level test cases for testing each version
+Low-level regression test cases based on fixed bugs for re-checking broken below places.
+Next test evidence:
+Photo
+Video
+Statuses of high-level test cases
+Statuses of low-level test cases
+
+
+
+
+
+
+Testing Tasks
+
+1. Creating a test plan and high-level test cases (checklist) based on requirements. This helps ensure that all base functionality is covered and that potential edge cases are accounted for.
+
+2. Executing high-level test cases and recording results. Using exploratory testing for coverage which not identified by checklists. 
+This allows for the identification of defects that can then be addressed.
+ Bugs Life Cycle / Bug statuses
+New/Open - Created bug.
+In progress - Dev is fixing a bug.
+Ready for QA - Wait to check the fix of the bug. (check the fixed version)
+QA in progress - QA in progress to check the fix of the bug.
+Fixed/Closed - QA verified.
+Re-opened - QA failed, bug is reproduced after fixing.
+Invalid - It is not a bug.
+Can`t reproduce - I try to reproduce but I can`t. Re-check steps.
+Won`t fix  - It`s a bug, but unfortunately, it won`t fix during the following 5 versions
+!!! Don't delete ANY bug (invalid, can`t reproduce, duplicated, won`t fix…any!)
+
+3. Reporting defects to developers. This allows developers to fix defects and improve the quality of the software.
+
+4. Creating low-level test cases based on fixed (Ready For QA status)  bugs.
+ 
+5. Retesting after defects are fixed. This helps ensure that defects have been properly fixed and that the software functions as expected.
+
+6. Executing low-level test cases ( they have the highest priority) and high-level test cases on each new version 
+
+7. Documenting results. This provides a record of what has been tested, what defects were found, and what the final software quality is. (Comparing created to fixed defects)
+
+
+
+
+
+
+Environmental needs
+Environments:
+Coding will be performed on DEV environment. 
+System testing will be performed on TEST environment by Main_Acad_Gr3 Manual QA
+UAT will be performed on UAT environment
+Deployment for users - PROD environment
+
+Needed tools and OS
+Python - version greater than 3.8
+Windows OS -  version greater than 7
+Internet
+Microsoft Excel
+Google docs
+
+
+Responsibilities
+
+Test Manager - Manages the entire project, determines project directions, utilizes appropriate resources.
+Testers - Define and describe appropriate methods, test and evaluate the test approach, execute the tests, write the results, and report defects.
+Implements test cases, test program, test suite.
+Test Administrator - creates and manages and maintains the test environment and assets.
+SQA - takes responsibility for quality assurance, checks whether the testing process meets the specified requirements.
+Developers - fixing bugs
+
+
+
+
+
+
+
+
+
+
+Schedule
+
+Tasks / Scope of work
+Start date
+End date
+Version
+Test planning.
+01.06.2024
+10.06.2024
+-
+Test monitoring and control.
+10.06.2024
+
+
+-
+Test analysis.
+10.06.2024
+
+
+-
+Test Design.
+10.06.2024
+
+
+-
+
+
+Test Implementation and Test Execution: (TBD)
+Pet Jira Version 1 
+10.06.2024
+17.06.2024
+v1
+Pet Jira Version 2
+17.06.2024
+24.06.2024
+v2
+Pet Jira Version 3
+24.06.2024
+27.06.2024
+v3
+Pet Jira Version 4 
+27.06.2024
+01.07.2024
+v4 
+Pet Jira Version 5
+01.07.2024
+04.07.2024
+v5
+Pet Jira Version 5 and
+Test Completion:
+a)  All regression test cases are designed and implemented
+b) All regression test cases executed for each version (from its created version)
+c) Checklists are created and executed for each version
+d) All bugs except Invalid, Can`t reproduce, Won`t fix are closed/fixed status (on lesson)
+e) Test plan is fully created and completed
+04.07.2024
+04.07.2024
+Cl act
+Exam:
+ You are accepted for the exam if
+done All Homeworks
+done All tests of each Module at least 67%
+You can get blue Certificate only in case:
+Done successful practice. especially Test Completion part.
+Mentor`s (YR) approval of practice (the main rule)
+Successful Exam (min 85%)
+
+If the test Completion part is not done you will get a white Certificate in case it is a successful Exam.
+
+
+15.07.2024
+15.07.2024
+Exam
+
+     
+Risks and contingencies;
+Supposed following risks can be:
+
+1.The short period for a project.
+2.Change in the requirements after development or testing started or additional issues.
+3.Reduction of staff
+4. Software Issues
+
+The contingencies can be:
+1.The offen network disconnect 
+2.Lack of electricity 
+3.Emergency situation by russian attacks
+4. Personal couses - diseases of staff, vocation, quit from job. 
+
+Risks p2
+-    	If employees (developers or testers) are fired or they themselves are fired, this can lead to coding errors or a large number of undiscovered bugs
+-        Constantly changing requirements can lead to errors in coding and testing
+-        At this time, you need to consider turning off the light, due to turning off the light, the work can be significantly delayed
+-        Employees may have vacations, this can significantly delay time
+-        Employees may go on sick leave, which may result in time delays
+-        Ignoring these risks could result in this application being released with a lot of bugs or not working at all
+
+
+
+
+
+
+
+
+
+
+
+
+
+Approvals
+
+1. Project manager - Olena Zelinska  _______________________   Date _____________
+2. Team Lead - Yuliia Rybachenko    _______________________   Date ______________
+3. Testers:
+	Bevzyuk Maria  ______________________  Date _______________
+	Bokatyuk Vlad  ______________________  Date _______________
+	Buyniakova Svitlana  _________________   Date _______________
+	Havryliuk Anna  _____________________  Date _______________
+	Goral Albina     ______________________  Date _______________
+	Kainar Ivan       ______________________  Date _______________
+	Kerest Karina    ______________________  Date _______________
+	Kiyanivskyi Vlad  ____________________  Date _______________
+	Melnyk Ivan      ______________________  Date _______________
+	Mal Anastasia   ______________________  Date _______________
+	Pohorilets Alina  _____________________  Date _______________
+	Dmytro Zinchenko  ___________________ Date _______________
+
+	
+Version approval
+Version
+Date
+Approvals
+Team Lead
+Signature
+Version 1
+10.06.2024
+
+
+☐ Approval
+Yuliia Rybachenko
+
+
+☐ Conditional approval
+☐ Not approved
+Version 2
+24.06.2024
+☐ Approval
+Yuliia Rybachenko
+
+
+☐ Conditional approval
+☐ Not approved
+Version 3
+27.06.2024
+☐ Approval
+Yuliia Rybachenko
+
+
+☐ Conditional approval
+☐ Not approved
+Version 4
+01.07.2024
+☐ Approval
+Yuliia Rybachenko
+
+
+☐ Conditional approval
+☐ Not approved
+Version 5
+04.07.2024
+☐ Approval
+Yuliia Rybachenko
+
+
+☐ Conditional approval
+☐ Not approved
+
+
